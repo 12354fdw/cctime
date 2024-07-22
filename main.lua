@@ -15,7 +15,7 @@ while true do
     local time = textutils.formatTime(nTime,false)..", Day "..nDay
     local time_ = textutils.formatTime(nTime,true)
     local first = tonumber(string.match(time_,"([^:]+)"))
-    local night = first >= 18 or first <= 6
+    local night = first >= 18 or first < 6
     if night then
         sky.setBackgroundColor(colors.black)
         sky.clear()
