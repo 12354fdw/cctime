@@ -51,19 +51,19 @@ while true do
 
     if weatherDec then
         if weatherDec.isSunny() then
-            paintutils.drawImage(clear,1,3)
-            term.setCursorPos(4,3)
+            term.setCursorPos(5,4)
             print("Sunny")
+            paintutils.drawImage(clear,1,3)
         end
         if weatherDec.isRaining() then
-            paintutils.drawImage(rainy,1,3)
-            term.setCursorPos(4,3)
+            term.setCursorPos(5,4)
             print("Rainy")
+            paintutils.drawImage(rainy,1,3)
         end
         if weatherDec.isThunder() then
-            paintutils.drawImage(thunder,1,3)
-            term.setCursorPos(4,3)
+            term.setCursorPos(5,4)
             print("Thunderstorm")
+            paintutils.drawImage(thunder,1,3)
         end
     end
 
