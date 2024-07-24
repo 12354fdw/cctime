@@ -1,15 +1,18 @@
 local dir = "time/"
 
-peripheral.find("monitor",term.redirect)
+local mon = peripheral.find("monitor")
+if mon then
+    term.redirect(mon)
+end
 local weatherDec = peripheral.find("environmentDetector")
 
 local sun = paintutils.loadImage(dir.."sun.nfp")
 local moon = paintutils.loadImage(dir.."moon.nfp")
 
 -- weather guis
-local clear = dir.."weather/clear.nfp"
-local rainy = dir.."weather/rainy.nfp"
-local thunder = dir.."weather/thunder.nfp"
+local clear = paintutils.loadImage(dir.."weather/clear.nfp")
+local rainy = paintutils.loadImage(dir.."weather/rainy.nfp")
+local thunder = paintutils.loadImage(dir.."weather/thunder.nfp")
 
 local w,h = term.getSize()
 
